@@ -31,6 +31,18 @@ public class StudentImpl implements StudentService {
 		return studentRepo.findById(id).get();
 	}
 
+	@Override
+	public StudentEntity update(StudentEntity studentEntity) {
+		// TODO Auto-generated method stub
+		return studentRepo.save(studentEntity);
+	}
+
+	@Override
+	public String delate(Integer id) {
+		studentRepo.deleteById(id);
+		return id+"this id is delate";
+	}
+
 	
 
 	

@@ -9,4 +9,6 @@ public interface StudentService {
 	public StudentEntity create(StudentEntity studentEntity);
 	public List<StudentEntity> findallentity();
 	public StudentEntity findbyids(Integer id);
+	public StudentEntity update(StudentEntity studentEntity);
+	public String delate(Integer id);
 }
