@@ -10,5 +10,5 @@ public interface StudentService {
 	public List<StudentEntity> findallentity();
 	public StudentEntity findbyids(Integer id);
 	public StudentEntity update(StudentEntity studentEntity);
-	public String delate(Integer id);
+	 String delete(Integer id);
 }

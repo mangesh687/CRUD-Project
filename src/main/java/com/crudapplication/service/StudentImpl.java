@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.crudapplication.entity.StudentEntity;
+import com.crudapplication.exception.FoundNotFoundException;
 import com.crudapplication.repository.StudentRepo;
 @Service
 public class StudentImpl implements StudentService {
@@ -27,7 +28,9 @@ public class StudentImpl implements StudentService {
 
 	@Override
 	public StudentEntity findbyids(Integer id) {
-		// TODO Auto-generated method stub
+		if(studentRepo.findById(id).isEmpty()) {
+			throw new FoundNotFoundException("id is not found"+id);
+		}
 		return studentRepo.findById(id).get();
 	}
 
@@ -38,10 +41,18 @@ public class StudentImpl implements StudentService {
 	}
 
 	@Override
-	public String delate(Integer id) {
+	public String delete(Integer id) {
+		// TODO Auto-generated method stub
 		studentRepo.deleteById(id);
-		return id+"this id is delate";
+		return "record is delated"+id;
 	}
+
+//	@Override
+//	public String delate(Integer id) {
+//		studentRepo.deleteById(id);
+//		
+//		return " delated "+id;
+//	}
 
 	
 

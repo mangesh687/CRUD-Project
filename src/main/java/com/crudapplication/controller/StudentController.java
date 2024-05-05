@@ -34,6 +34,9 @@ public class StudentController {
 	
 	@GetMapping("/get/{id}")
 	public StudentEntity getone(@PathVariable Integer id){
+		
+		
+		
 		return studentService.findbyids(id);
 	}
 	
@@ -43,8 +46,8 @@ public class StudentController {
 	}
 	
 	@DeleteMapping("/delete/{id}")
-	public String delete(@PathVariable Integer id) {
-		return studentService.delate(id);
+	public String delete1(@PathVariable Integer id) {
+		return studentService.delete(id);
 	}
 	
 	
