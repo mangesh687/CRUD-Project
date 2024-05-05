@@ -6,5 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.crudapplication.entity.StudentEntity;
 @Repository
 public interface StudentRepo extends JpaRepository<StudentEntity, Integer> {
+	// castom find byid 
+	public StudentEntity findBySchoolfee(Integer schoolfee);
 
 }

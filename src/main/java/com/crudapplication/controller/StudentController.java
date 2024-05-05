@@ -49,6 +49,10 @@ public class StudentController {
 	public String delete1(@PathVariable Integer id) {
 		return studentService.delete(id);
 	}
+	@GetMapping("/exam/{schoolfee}")
+	public StudentEntity getexam(@PathVariable Integer schoolfee) {
+		return studentService.findbyexamfee(schoolfee);
+	}
 	
 	
 	

@@ -47,12 +47,14 @@ public class StudentImpl implements StudentService {
 		return "record is delated"+id;
 	}
 
-//	@Override
-//	public String delate(Integer id) {
-//		studentRepo.deleteById(id);
-//		
-//		return " delated "+id;
-//	}
+	@Override
+	public StudentEntity findbyexamfee(Integer schoolfee) {
+		// TODO Auto-generated method stub
+		return studentRepo.findBySchoolfee(schoolfee);
+	}
+
+	
+
 
 	
 

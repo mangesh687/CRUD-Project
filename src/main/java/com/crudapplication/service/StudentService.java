@@ -10,5 +10,6 @@ public interface StudentService {
 	public List<StudentEntity> findallentity();
 	public StudentEntity findbyids(Integer id);
 	public StudentEntity update(StudentEntity studentEntity);
-	 String delete(Integer id);
+	public  String delete(Integer id);
+	public StudentEntity findbyexamfee(Integer schoolfee);
 }
