@@ -27,7 +27,7 @@ public class StudentController {
 		return studentService.create(studentEntity);
 	}
 	
-	@GetMapping("/getall")
+	@GetMapping("/getall1")
 	public List<StudentEntity> getall(){
 		return studentService.findallentity();
 	}
